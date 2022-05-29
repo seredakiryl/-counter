@@ -1,0 +1,12 @@
+.counter {
+  background-color: rgb(44, 37, 51);
+  border: 2px aqua solid;
+  border-radius: 10px;
+  padding: 25px;
+  width: 250px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
