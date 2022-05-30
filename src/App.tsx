@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import s from './App.module.css';
 import { Counter } from './components/Counter';
 
 function App() {
   let [count, setValue] = useState(0);
 
+  useEffect(() => {
+    let countLocalStorge = localStorage.getItem('curentValue')
+    if (countLocalStorge) {
+      let newValue = JSON.parse(countLocalStorge)
+      setValue(newValue)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('curentValue', JSON.stringify(count))
+  }, [count])
+
+
   const maxCount = 7
   const increment = () => {
-    count < maxCount ? setValue(count + 1) : setValue(count)
-    localStorage.setItem('curentValue', JSON.stringify(count))
+    setValue(count + 1)
+
   }
   const reset = () => {
     setValue(0)
