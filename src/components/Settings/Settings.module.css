@@ -1,0 +1,29 @@
+.settings {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 380px;
+  height: 320px;
+  padding: 25px;
+  border: 2px aqua solid;
+  border-radius: 10px;
+}
+
+.valuesContainer {
+  border: 2px aqua solid;
+  padding: 25px;
+  width: 250px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  width: 190px;
+  padding: 25px;
+  border: 2px aqua solid;
+  border-radius: 10px;
+}

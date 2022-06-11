@@ -1,9 +1,11 @@
+
+import { MouseEvent } from 'react'
 import s from './Button.module.css'
 
 type ButtonProps = {
-    callback: () => void
+    callback?: () => void
     name: string
-    disabled: boolean
+    disabled?: boolean
 }
 
 export const Button = (props: ButtonProps) => {

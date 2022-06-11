@@ -1,0 +1,16 @@
+.value {
+  color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.value input {
+  width: 90px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.inccorectValue {
+  background: rgb(224, 84, 84);
+}
