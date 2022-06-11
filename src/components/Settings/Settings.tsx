@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Button } from '../Button/Button'
 import { InputSettings } from './InputSettings/InputSettings'
 import s from './Settings.module.css'
@@ -67,9 +67,9 @@ export const Settings = (props: SettingsPropsType) => {
                 <InputSettings name={'Max Value'} value={sattingsMaxValue} error={props.error} callback={onChangeSattingsMaxValue} />
                 <InputSettings name={'Start Value'} value={sattingsStartValue} error={props.error} callback={onChangeSattingsStartValue} />
             </div>
-            <NavLink to={'/'} className={s.button}>
+            <Link to={'/'} className={s.button}>
                 <Button disabled={disabledBtn} name={'SET'} callback={saveSattingsValues} />
-            </NavLink>
+            </Link>
         </div >
     )
 }

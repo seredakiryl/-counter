@@ -1,7 +1,7 @@
 import { Button } from "./Button/Button"
 import { CurrentValue } from "./CurrentValue/CurrentValue"
 import s from './Counter.module.css'
-import { NavLink } from "react-router-dom"
+import { Link, } from "react-router-dom"
 type CounterPropsType = {
     count: number
     maxCount: number
@@ -23,7 +23,7 @@ export const Counter = (props: CounterPropsType) => {
             <div className={s.buttons}>
                 <Button disabled={props.count === props.maxCount} name={'INC'} callback={increment} />
                 <Button disabled={props.count === 0} name={'RESET'} callback={reset} />
-                <NavLink to={'/Sattings'}> <Button name={'SET'} /></NavLink>
+                <Link to={'/Sattings'}> <Button name={'SET'} /></Link>
             </div>
         </div>
     )
